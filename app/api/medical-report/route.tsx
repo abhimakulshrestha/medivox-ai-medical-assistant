@@ -83,3 +83,5 @@ export async function POST(req:NextRequest){
     return NextResponse.json({ error: e && e.message ? e.message : String(e) });
   }
 }
+
+// const bar: unknown = ...; // Removed invalid syntax

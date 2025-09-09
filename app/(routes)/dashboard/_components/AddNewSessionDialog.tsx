@@ -98,7 +98,7 @@ function AddNewSessionDialog() {
           {(Array.isArray(suggestedDoctors) ? suggestedDoctors : []).map((doctor, index)=>(
             <SuggestedDoctorCard doctorAgent={doctor} key={index}
             setSelectedDoctor={() => setSelectedDoctor(doctor)} 
-             //@ts-expect-error
+             //@ts-expect-error - required for type workaround with third-party component
             selectedDoctor = {selectedDoctor}/>
           ))}
         </div>

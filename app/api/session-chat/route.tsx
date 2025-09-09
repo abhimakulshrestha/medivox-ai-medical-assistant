@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
     const user = await currentUser();
     if(sessionId=='all'){
         const result = await db.select().from(SessionChatTable)
-     // @ts-expect-error
+     // @ts-expect-error - required for type workaround with third-party library
     .where(eq(SessionChatTable.createdBy, user?.primaryEmailAddress?.emailAddress ))
     .orderBy(desc(SessionChatTable.id));
 
@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
     }
     else{
         const result = await db.select().from(SessionChatTable)
-     // @ts-expect-error
+     // @ts-expect-error - required for type workaround with third-party library
     .where(eq(SessionChatTable.sessionId, sessionId));
 
     return NextResponse.json(result[0]);

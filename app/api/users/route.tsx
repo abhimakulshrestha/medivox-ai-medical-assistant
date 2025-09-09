@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     const users = await db
       .select()
       .from(usersTable)
-       // @ts-expect-error
+       // @ts-expect-error - required for type workaround with third-party library
       .where(eq(usersTable.email, user?.primaryEmailAddress?.emailAddress));
 
     if (users?.length === 0) {

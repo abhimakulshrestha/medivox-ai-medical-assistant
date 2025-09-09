@@ -30,6 +30,7 @@ function Provider({
         setUserDetail(result.data);
     }
 
+
     return(
         <div>
             <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>

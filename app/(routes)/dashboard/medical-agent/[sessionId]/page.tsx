@@ -261,3 +261,7 @@ function MedicalAgentPage() {
 }
 
 export default MedicalAgentPage;
+
+// const foo: unknown = ...;
+// const bar: unknown = ...;
+// const baz: unknown = ...;
