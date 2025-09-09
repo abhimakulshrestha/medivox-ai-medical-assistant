@@ -18,3 +18,5 @@ function SuggestedDoctorCard({ doctorAgent, setSelectedDoctor, selectedDoctor }:
     );
 }
 export default SuggestedDoctorCard;
+
+function myFunc(param: unknown) { }

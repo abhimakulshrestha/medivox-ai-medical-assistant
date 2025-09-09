@@ -25,7 +25,6 @@ function DoctorsAgentCard({doctorAgent}:props) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
     const {has} = useAuth();
-    //@ts-ignore
     const paidUser =has && has({ plan: 'pro' })
     console.log(paidUser);
 

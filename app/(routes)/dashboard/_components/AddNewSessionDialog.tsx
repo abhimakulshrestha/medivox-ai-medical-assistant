@@ -29,7 +29,6 @@ function AddNewSessionDialog() {
     const router = useRouter();
 
     const {has} = useAuth();
-      //@ts-ignore
       const paidUser =has && has({ plan: 'pro' })
           useEffect(() => {
           GetHistoryList();
@@ -99,7 +98,7 @@ function AddNewSessionDialog() {
           {(Array.isArray(suggestedDoctors) ? suggestedDoctors : []).map((doctor, index)=>(
             <SuggestedDoctorCard doctorAgent={doctor} key={index}
             setSelectedDoctor={() => setSelectedDoctor(doctor)} 
-            //@ts-ignore
+             //@ts-expect-error
             selectedDoctor = {selectedDoctor}/>
           ))}
         </div>

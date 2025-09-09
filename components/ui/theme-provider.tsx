@@ -11,3 +11,5 @@ export function ThemeProvider({ children }: React.PropsWithChildren<{}>) {
     </NextThemesProvider>
   );
 }
+
+function myFunc(arg: object): void { }
